@@ -15,10 +15,10 @@ export const LayoutForm = () => {
 
   return (
     <div className="flex h-screen flex-col items-center justify-center">
-      <Button className="flex h-[42px] w-44 gap-ten px-5">
-          <PlusCircle width={21} height={21} />
-          Criar unidade
-        </Button>
+      <Button className="gap-ten flex h-[42px] w-44 px-5">
+        <PlusCircle width={21} height={21} />
+        Criar unidade
+      </Button>
       <Outlet />
       {/* <div className="flex justify-between">
         <div

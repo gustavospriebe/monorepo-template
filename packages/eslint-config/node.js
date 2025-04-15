@@ -6,7 +6,7 @@ export default [
   {
     files: ["**/*.ts"],
     languageOptions: {
-      globals: globals.node
-    }
-  }
-]; 
+      globals: globals.node,
+    },
+  },
+];

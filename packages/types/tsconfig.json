@@ -3,7 +3,7 @@
   "compilerOptions": {
     "outDir": "dist",
     "declaration": true,
-    "declarationMap": true,
+    "declarationMap": true
     // Consider uncommenting if this package ONLY contains types and no runtime code
     // "emitDeclarationOnly": true
   },

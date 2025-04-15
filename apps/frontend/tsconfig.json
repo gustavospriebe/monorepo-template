@@ -10,6 +10,5 @@
       "@/*": ["./src/*"],
       "@newcompany/ui/*": ["../../packages/ui/src/*"]
     }
-    
   }
 }
