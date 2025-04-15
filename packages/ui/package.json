@@ -2,6 +2,7 @@
   "name": "@newcompany/ui",
   "version": "0.0.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "ui": "pnpm dlx shadcn@latest",
     "lint": "eslint ."
@@ -10,8 +11,11 @@
     "react": "^18"
   },
   "devDependencies": {
+    "@newcompany/typescript-config": "workspace:*",
+    "@newcompany/eslint-config": "workspace:*",
     "@shadcn/ui": "^0.0.4",
     "@types/node": "^20.11.19",
+    "@types/react": "^18.3.18",
     "autoprefixer": "^10",
     "postcss": "^8.4.35",
     "postcss-load-config": "^6.0.1",
@@ -19,13 +23,12 @@
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.1.1",
-    "@types/react": "^18.3.18",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "lucide-react": "^0.474.0",
     "tailwind-merge": "^2.6.0",
     "tailwindcss-animate": "^1.0.7",
-    "typescript": "~5.6.2"
+    "@newcompany/types": "workspace:*"
   },
   "exports": {
     "./globals.css": "./src/globals.css",

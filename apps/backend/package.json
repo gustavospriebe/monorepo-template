@@ -10,9 +10,12 @@
     "lint": "eslint . --ext ts --report-unused-disable-directives --max-warnings 0"
   },
   "dependencies": {
+    "@newcompany/types": "workspace:*",
     "fastify": "^4.26.1"
   },
   "devDependencies": {
+    "@newcompany/typescript-config": "workspace:*",
+    "@newcompany/eslint-config": "workspace:*",
     "@types/node": "^20.11.19",
     "tsx": "^4.7.1"
   }

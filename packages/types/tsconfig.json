@@ -1,0 +1,12 @@
+{
+  "extends": "../typescript-config/library.json",
+  "compilerOptions": {
+    "outDir": "dist",
+    "declaration": true,
+    "declarationMap": true,
+    // Consider uncommenting if this package ONLY contains types and no runtime code
+    // "emitDeclarationOnly": true
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "dist"]
+}

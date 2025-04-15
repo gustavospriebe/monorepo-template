@@ -1,4 +1,5 @@
 {
+  "extends": "../typescript-config/library.json",
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
