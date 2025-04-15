@@ -1,0 +1,24 @@
+# Build output
+dist
+build
+out
+
+# Dependencies
+node_modules
+
+# Lockfiles
+pnpm-lock.yaml
+package-lock.json
+yarn.lock
+
+# Environment files
+.env*
+
+# Cache directories
+.turbo
+.next
+.vite
+.svelte-kit
+
+# Logs
+*.log
