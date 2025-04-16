@@ -1,0 +1,31 @@
+{
+  "name": "@newcompany/dbmigrator",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./db.d.ts": "./src/db.d.ts"
+  },
+  "scripts": {
+    "codegen": "kysely-codegen --out-file ./src/db.d.ts && mkdir -p ../../apps/profile/src/types && cp ./src/db.d.ts ../../apps/profile/src/types/ && mkdir -p ../../apps/ghg/src/types && cp ./src/db.d.ts ../../apps/ghg/src/types/",
+    "kysely:make": "kysely migrate:make",
+    "kysely:migrate": "tsx src/db-confirm.ts migrate",
+    "kysely:rollback": "tsx src/db-confirm.ts rollback",
+    "kysely:rollback:all": "tsx src/db-confirm.ts rollback:all",
+    "kysely:remigrate": "tsx src/db-confirm.ts remigrate"
+  },
+  "dependencies": {
+    "dotenv": "^16.5.0",
+    "kysely": "^0.27.5",
+    "pg": "^8.14.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.17.30",
+    "@types/pg": "^8.11.13",
+    "kysely-codegen": "^0.18.3",
+    "kysely-ctl": "^0.12.2",
+    "tsx": "^4.7.1",
+    "@newcompany/typescript-config": "workspace:*",
+    "@newcompany/eslint-config": "workspace:*"
+  }
+}
