@@ -1,0 +1,20 @@
+FROM node:20-alpine
+
+RUN npm install -g pnpm
+
+WORKDIR /app
+
+# Copy root workspace files
+COPY package.json pnpm-lock.yaml pnpm-workspace.yaml ./
+
+# Copy the backend app
+COPY apps/backend apps/backend
+
+# Install dependencies with specific filter
+RUN pnpm install --filter @newcompany/backend...
+
+WORKDIR /app/apps/backend
+
+EXPOSE 8000
+
+CMD ["pnpm", "dev"] 

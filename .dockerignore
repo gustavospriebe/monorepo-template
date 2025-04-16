@@ -1,0 +1,43 @@
+# Dependencies
+node_modules
+**/node_modules
+.pnpm-store
+.npm
+.cache
+
+# Source control
+.git
+.gitignore
+.gitattributes
+
+# Build outputs
+**/dist
+**/build
+**/.next
+**/.nuxt
+
+# Environment and config files
+.env*
+**/.env*
+!.env.example
+
+# Development files
+.vscode
+.idea
+**/*.log
+**/*.md
+**/.DS_Store
+**/coverage
+
+# Test files
+**/__tests__
+**/*.test.*
+**/*.spec.*
+
+# Docker files
+**/Dockerfile*
+**/.dockerignore
+docker-compose*.yml
+
+# Turbo
+.turbo

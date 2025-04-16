@@ -1,0 +1,33 @@
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: apps/backend/Dockerfile.prod
+    image: hosts-backend:latest
+    restart: unless-stopped
+    env_file:
+      - .env
+      - apps/backend/.env
+    environment:
+      - NODE_ENV=production
+    ports:
+      - "8000:8000"
+    # deploy:
+    #   resources:
+    #     limits:
+    #       cpus: "2"
+    #       memory: 2G
+    #     reservations:
+    #       cpus: "0.5"
+    #       memory: 512M
+    healthcheck:
+      test:
+        [
+          "CMD-SHELL",
+          "curl -f http://localhost:8000/app/health-check || exit 1",
+        ]
+      interval: 30s
+      timeout: 3s
+      retries: 3
+      start_period: 20s
+
