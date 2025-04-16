@@ -4,6 +4,8 @@
   "version": "1.0.0",
   "packageManager": "pnpm@9.15.4",
   "scripts": {
+    "frontend:dev": "pnpm --filter @newcompany/frontend dev",
+    "backend:dev": "pnpm --filter @newcompany/backend dev",
     "build": "turbo run build",
     "dev": "turbo run dev",
     "lint": "turbo run lint",
